@@ -142,7 +142,7 @@ tar -xzf BioPosture_v2.0_linux_x86_64.tar.gz
 # Esecuzione
 cd BioPosture_v2.0_linux_x86_64
 ./BioPosture
-
+```
 ---
 
 ## 📖 Guida Utilizzo
@@ -200,7 +200,7 @@ cd BioPosture_v2.0_linux_x86_64
 |    /    \/    \
 | ------------------> t
   Testa (rosso) | Collo (verde)
-
+```
 ### 📸 Screenshots
 
 <div align="center">
@@ -225,8 +225,6 @@ cd BioPosture_v2.0_linux_x86_64
 
 </div>
 ---
-
-```
 
 ### ⚡ Funzionalità Avanzate
 
@@ -530,7 +528,7 @@ alert_delay = base_alert_delay * time_factor
 
 ---
 
-## 🔬 Validazione & Testing
+### 🔬 Validazione & Testing
 
 ### ✅ Test Matrix
 
@@ -633,7 +631,7 @@ furnished to do so, subject to the following conditions:
 - 📧 Issues & Support: [GitHub Issues](https://github.com/antdf87/BioPosture/issues)
 
 ---
-## 📚 Citazione
+### 📚 Citazione
 
 Se utilizzi questo software per scopi accademici o di ricerca, per favore cita il progetto utilizzando il file CITATION.cff incluso o il seguente formato BibTeX:
 
@@ -645,7 +643,7 @@ Se utilizzi questo software per scopi accademici o di ricerca, per favore cita i
   url = {[https://github.com/antdf87/BioPosture](https://github.com/antdf87/BioPosture)}
 }
 
-## 🙏 Ringraziamenti
+### 🙏 Ringraziamenti
 
 Questo progetto non sarebbe possibile senza:
 
@@ -672,7 +670,7 @@ Questo progetto non sarebbe possibile senza:
 
 ---
 
-## 🗺️ Roadmap
+### 🗺️ Roadmap
 
 ### v2.1 (Q2 2025)
 
