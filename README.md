@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![BioPosture Logo](assets/BioPosture.jpg)
+<img src="assets/BioPosture.jpg" alt="BioPosture Logo" width="300"/>
 
 ### 👨‍💻Sistema avanzato di monitoraggio posturale in tempo reale
 
@@ -155,17 +155,12 @@ cd BioPosture_v2.0_linux_x86_64
    - Linux: Application Menu → BioPosture
 
 2. **Calibrazione Iniziale** (OBBLIGATORIA)
-   ```
-   ┌─────────────────────────────────────────┐
-   │  "Prima di iniziare il monitoraggio,    │
-   │   è necessario calibrare il sistema"    │
-   │                                         │
-   │  1. Siediti in postura CORRETTA        │
-   │  2. Guarda dritto la camera             │
-   │  3. Click "AVVIA CALIBRAZIONE"          │
-   │  4. Mantieni posizione per 5 secondi    │
-   └─────────────────────────────────────────┘
-   ```
+   > **"Prima di iniziare il monitoraggio, è necessario calibrare il sistema"**
+   >
+   > 1. Siediti in postura CORRETTA
+   > 2. Guarda dritto la camera
+   > 3. Click "AVVIA CALIBRAZIONE"
+   > 4. Mantieni posizione per 5 secondi
 
 3. **Conferma Calibrazione**
    - Status: `MONITORAGGIO ATTIVO` (verde)
@@ -175,62 +170,62 @@ cd BioPosture_v2.0_linux_x86_64
 
 #### Pannello Video (Sinistra)
 
-```
-┌────────────────────────────────────────┐
-│  [Camera: 0 ▼] [Stop] [⚙️ Controls]   │
-├────────────────────────────────────────┤
-│                                        │
-│      🎥 FEED WEBCAM + OVERLAY          │
-│                                        │
-│      • Landmark faccia (iris)          │
-│      • Landmark corpo (orecchie/spalle)│
-│      • Linee posturali                 │
-│                                        │
-└────────────────────────────────────────┘
-```
+* **Controlli:** `[Camera: 0 ▼]` `[Stop]` `[⚙️ Controls]`
+* **Visualizzazione:**
+    * 🎥 **FEED WEBCAM + OVERLAY**
+    * • Landmark faccia (iris)
+    * • Landmark corpo (orecchie/spalle)
+    * • Linee posturali
 
 #### Pannello Controllo (Destra)
 
 **Card 1: Parametri Posturali**
-```
-╔═══════════════════════════════════════╗
-║  PARAMETRI POSTURALI                  ║
-╟───────────────────────────────────────╢
-║  Inclinazione Testa     → 3.5°        ║
-║  Asimmetria Spalle      → 2.1°        ║
-║  Distanza Schermo       → 58 cm       ║
-║  Tensione Cervicale     → 94%         ║
-╚═══════════════════════════════════════╝
-```
+
+| PARAMETRI POSTURALI | Valore |
+| :--- | :--- |
+| **Inclinazione Testa** | → 3.5° |
+| **Asimmetria Spalle** | → 2.1° |
+| **Distanza Schermo** | → 58 cm |
+| **Tensione Cervicale** | → 94% |
 
 **Card 2: Efficienza Sessione**
-```
-╔═══════════════════════════════════════╗
-║  EFFICIENZA SESSIONE                  ║
-║  ████████████████░░░░  82%            ║
-╚═══════════════════════════════════════╝
-```
+* **Score:** `██████████░░` **82%**
 
 **Card 3: Grafico Real-Time**
-```
-╔═══════════════════════════════════════╗
-║   Δ                                   ║
-║   │   ╱╲    ╱╲                        ║
-║   │  ╱  ╲  ╱  ╲   ╱╲                  ║
-║   │ ╱    ╲╱    ╲ ╱  ╲                 ║
-║   └─────────────────────> t           ║
-║     Testa (rosso) | Collo (verde)     ║
-╚═══════════════════════════════════════╝
-```
+```text
+^ Δ (Deviazione)
+|
+|      /\    /\
+|     /  \  /  \
+|    /    \/    \
+| ------------------> t
+  Testa (rosso) | Collo (verde)
 
-**Card 4: Configurazione**
-```
-╔═══════════════════════════════════════╗
-║  SOGLIA TOLLERANZA                    ║
-║  [━━━━━━━●━━━━━] 50%                  ║
-║                                       ║
-║  ☑ Autostart  ☑ Notifiche  ☐ Light   ║
-╚═══════════════════════════════════════╝
+### 📸 Screenshots
+
+<div align="center">
+
+### Interfaccia Principale
+![Interfaccia](docs/screenshots/main_interface.png)
+
+### Processo di Calibrazione
+![Calibrazione](docs/screenshots/calibration.png)
+
+### Allarme Postura
+![Alert](docs/screenshots/posture_alert1.png)
+![Alert](docs/screenshots/posture_alert2.png)
+
+### Notifica allarme
+![Notification](docs/screenshots/notification_alert1.jpeg)
+![Notification](docs/screenshots/notification_alert2.jpeg)
+
+### System Tray
+![System Tray](docs/screenshots/system_tray1.jpeg)
+![System Tray](docs/screenshots/system_tray2.jpeg)
+
+</div>
+---
+
 ```
 
 ### ⚡ Funzionalità Avanzate
@@ -265,30 +260,6 @@ cd BioPosture_v2.0_linux_x86_64
 - macOS: `~/Library/Application Support/BioPosture/config.json`
 - Linux: `~/.config/BioPosture/config.json`
 
----
-## 📸 Screenshots
-
-<div align="center">
-
-### Interfaccia Principale
-![Interfaccia](docs/screenshots/main_interface.png)
-
-### Processo di Calibrazione
-![Calibrazione](docs/screenshots/calibration.png)
-
-### Allarme Postura
-![Alert](docs/screenshots/posture_alert1.png)
-![Alert](docs/screenshots/posture_alert2.png)
-
-### Notifica allarme
-![Notification](docs/screenshots/notification_alert1.jpeg)
-![Notification](docs/screenshots/notification_alert2.jpeg)
-
-### System Tray
-![System Tray](docs/screenshots/system_tray1.jpeg)
-![System Tray](docs/screenshots/system_tray2.jpeg)
-
-</div>
 ---
 
 ## 🛠 Compilazione da Sorgente
