@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="assets/BioPosture.jpg" alt="BioPosture Logo" width="300"/>
+<img src="assets/BioPosture.jpeg" alt="BioPosture Logo" width="300"/>
 
 ### 👨‍💻Sistema avanzato di monitoraggio posturale in tempo reale
 
