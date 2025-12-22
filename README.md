@@ -85,12 +85,12 @@ Input: Webcam integrata o USB (risoluzione min. 720p).
 ![Alert](docs/screenshots/posture_alert2.png)
 
 ### Notifica allarme
-![Notification](docs/screenshots/notification_alert1.png)
-![Notification](docs/screenshots/notification_alert2.png)
+![Notification](docs/screenshots/notification_alert1.jpeg)
+![Notification](docs/screenshots/notification_alert2.jpeg)
 
-### Notifica allarme
-![System Tray](docs/screenshots/system_tray1.png)
-![System Tray](docs/screenshots/system_tray2.png)
+### System Tray
+![System Tray](docs/screenshots/system_tray1.jpeg)
+![System Tray](docs/screenshots/system_tray2.jpeg)
 
 </div>
 
@@ -98,4 +98,5 @@ Runtime: Architettura 64-bit, 4GB RAM.
 
 
 Developed by AntDF87 - Engineering & Biomedical Solutions
+
 
