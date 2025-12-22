@@ -9,6 +9,8 @@ License: MIT License
 
 BioPosture è una piattaforma software cross-platform progettata per l'analisi cinematica in tempo reale e il monitoraggio ergonomico del rachide cervicale. Sfruttando algoritmi di Computer Vision e reti neurali per la stima della posa (MediaPipe Framework), il sistema elabora un flusso video per quantificare vettori geometrici chiave (inclinazione testa-collo, simmetria scapolare, distanza focale) senza l'ausilio di sensori indossabili (markerless).
 
+
+
 ⚙️ Architettura del Sistema
 
 Il software è sviluppato in Python e implementa una pipeline di elaborazione così strutturata:
@@ -20,6 +22,8 @@ Inference: Estrazione dei landmark facciali e corporei (Pose/Face Mesh Topology)
 Analisi Geometrica: Calcolo in tempo reale degli angoli di Eulero e vettori di distanza normalizzati sull'iride.
 
 HMI: Interfaccia grafica High-DPI basata su customtkinter con rendering vettoriale.
+
+
 
 🚀 Funzionalità Ingegneristiche
 
@@ -39,6 +43,8 @@ Background Process: Esecuzione ottimizzata in System Tray per minimizzare l'impa
 
 Data Logging: Esportazione delle metriche temporali in formato CSV per post-processing.
 
+
+
 🛠 Deployment & Installazione
 
 Eseguibile Standalone (Consigliata)
@@ -57,6 +63,7 @@ pip install -r requirements.txt
 python bioposture_interface.py
 
 
+
 💻 Requisiti di Sistema
 
 OS: Windows 10/11, macOS (Silicon/Intel), Linux.
@@ -64,5 +71,6 @@ OS: Windows 10/11, macOS (Silicon/Intel), Linux.
 Input: Webcam integrata o USB (risoluzione min. 720p).
 
 Runtime: Architettura 64-bit, 4GB RAM.
+
 
 Developed by AntDF87 - Engineering & Biomedical Solutions
