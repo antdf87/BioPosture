@@ -14,7 +14,7 @@
 [![Release](https://img.shields.io/github/v/release/antdf87/BioPosture?color=red)](https://github.com/antdf87/BioPosture/releases)
 [![Downloads](https://img.shields.io/github/downloads/antdf87/BioPosture/total?color=brightgreen)](https://github.com/antdf87/BioPosture/releases)
 
-[📦 Installazione](#-installazione) • [✨ Features](#-caratteristiche-principali) • [🎯 Demo](#-interfaccia) • [🛠 Build](#-compilazione-da-sorgente) • [🤝 Contributi](#-contributi)
+[📦 Installazione](#-installazione) • [✨ Features](#-caratteristiche-principali) • [🎯 Demo](#-interfaccia) • [🛠 Build](#-compilazione-da-sorgente) • [🤝 Contributi](#-contributi) • [👤 Autore](#-autore)
 
 </div>
 
@@ -149,20 +149,19 @@ cd BioPosture_v2.0_linux_x86_64
 
 ### 🎬 Primo Avvio - Setup Rapido
 
-1. **Avvio Applicazione**
+1\. **Avvio Applicazione**
    - Windows: Menu Start → BioPosture
    - macOS: Launchpad → BioPosture
    - Linux: Application Menu → BioPosture
 
-2. **Calibrazione Iniziale** (OBBLIGATORIA)
-   > **"Prima di iniziare il monitoraggio, è necessario calibrare il sistema"**
-   >
-   > 1. Siediti in postura CORRETTA
-   > 2. Guarda dritto la camera
-   > 3. Click "AVVIA CALIBRAZIONE"
-   > 4. Mantieni posizione per 5 secondi
+2\. **Calibrazione Iniziale** (OBBLIGATORIA) "Prima di iniziare il monitoraggio, è necessario calibrare il sistema"
 
-3. **Conferma Calibrazione**
+  1. Siediti in postura CORRETTA
+  2. Guarda dritto la camera
+  3. Click "AVVIA CALIBRAZIONE"
+  4. Mantieni posizione per 5 secondi
+
+3\. **Conferma Calibrazione**
    - Status: `MONITORAGGIO ATTIVO` (verde)
    - Valori baseline salvati automaticamente
 
@@ -622,7 +621,7 @@ furnished to do so, subject to the following conditions:
 ```
 
 
-## 👨‍💻 Autore
+### 👤 Autore
 
 **Antonio Del Fine (AntDF87)**  
 *Engineering & Biomedical Solutions*
