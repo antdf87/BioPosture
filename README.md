@@ -70,7 +70,32 @@ OS: Windows 10/11, macOS (Silicon/Intel), Linux.
 
 Input: Webcam integrata o USB (risoluzione min. 720p).
 
+## 📸 Screenshots
+
+<div align="center">
+
+### Interfaccia Principale
+![Interfaccia](docs/screenshots/main_interface.png)
+
+### Processo di Calibrazione
+![Calibrazione](docs/screenshots/calibration.png)
+
+### Allarme Postura
+![Alert](docs/screenshots/posture_alert1.png)
+![Alert](docs/screenshots/posture_alert2.png)
+
+### Notifica allarme
+![Notification](docs/screenshots/notification_alert1.png)
+![Notification](docs/screenshots/notification_alert2.png)
+
+### Notifica allarme
+![System Tray](docs/screenshots/system_tray1.png)
+![System Tray](docs/screenshots/system_tray2.png)
+
+</div>
+
 Runtime: Architettura 64-bit, 4GB RAM.
 
 
 Developed by AntDF87 - Engineering & Biomedical Solutions
+
