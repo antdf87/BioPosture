@@ -1,8 +1,8 @@
-# 🏥 BioPosture v2.0
+# 👨‍💻 BioPosture v2.0
 
 <div align="center">
 
-![BioPosture Logo](assets/BioPosture.jpeg)
+![BioPosture Logo](assets/BioPosture.jpg)
 
 ### 👨‍💻Sistema avanzato di monitoraggio posturale in tempo reale
 
