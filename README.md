@@ -671,6 +671,6 @@ Questo progetto non sarebbe possibile senza:
 
 ### 🗺️ Roadmap
 
-### v2.1 (Q2 2025)
+### v2.1 (Q2 2026)
 
 - [ ] **Machine Learning
