@@ -493,7 +493,7 @@ class BioPostureApp(ctk.CTk):
                               border_width=1, border_color=GLOSS_BORDER_COLOR)
         card_4.pack(fill="x", pady=(0, 10))
 
-        ctk.CTkLabel(card_4, text="SOGLIA TOLLERANZA", font=(THEME_FONT_MAIN, 11, "bold"), text_color=GLOSS_TEXT_DIM).pack(pady=(10, 2))
+        ctk.CTkLabel(card_4, text="SOGLIA DI SEVERITÀ", font=(THEME_FONT_MAIN, 11, "bold"), text_color=GLOSS_TEXT_DIM).pack(pady=(10, 2))
         self.sev_label = ctk.CTkLabel(card_4, text=f"{int(self.severity_var.get())}%", font=(THEME_FONT_MONO, 12), text_color=GLOSS_TEXT)
         self.sev_label.pack()
         self.sev_slider = ctk.CTkSlider(
