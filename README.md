@@ -1,12 +1,12 @@
-# 👨‍💻 BioPosture v2.0
+# 🏥 BioPosture v2.0
 
 <div align="center">
 
-<img src="assets/BioPosture.jpeg" alt="BioPosture Logo" width="300"/>
+![BioPosture Logo](assets/BioPosture.jpeg)
 
-### 👨‍💻Sistema avanzato di monitoraggio posturale in tempo reale
+### Real-Time Postural Monitoring System
 
-**Monitoraggio ergonomico avanzato tramite Computer Vision & Machine Learning**
+**Advanced ergonomic monitoring via Computer Vision & Machine Learning**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-blue)]()
@@ -14,7 +14,7 @@
 [![Release](https://img.shields.io/github/v/release/antdf87/BioPosture?color=red)](https://github.com/antdf87/BioPosture/releases)
 [![Downloads](https://img.shields.io/github/downloads/antdf87/BioPosture/total?color=brightgreen)](https://github.com/antdf87/BioPosture/releases)
 
-[📦 Installazione](#-installazione) • [✨ Features](#-caratteristiche-principali) • [🎯 Demo](#-interfaccia) • [🛠 Build](#-compilazione-da-sorgente) • [🤝 Contributi](#-contributi) • [👤 Autore](#-autore)
+[📦 Installation](#-installation) • [✨ Features](#-key-features) • [🎯 Interface](#-interface) • [🛠 Build](#-build-from-source) • [🤝 Contributing](#-contributing)
 
 </div>
 
@@ -22,260 +22,293 @@
 
 ## 📋 Overview
 
-**BioPosture** è una piattaforma software cross-platform progettata per l'analisi cinematica in tempo reale e il monitoraggio ergonomico del rachide cervicale. Sfruttando algoritmi di **Computer Vision** e reti neurali per la stima della posa (**MediaPipe Framework**), il sistema trasforma una comune webcam in un sensore biometrico di precisione.
+**BioPosture** is a cross-platform software platform for real-time kinematic analysis and ergonomic monitoring of the cervical spine. By leveraging **Computer Vision** algorithms and neural networks for pose estimation (**MediaPipe Framework**), the system turns a standard webcam into a precision biometric sensor.
 
-L'obiettivo primario è la prevenzione dei disturbi muscolo-scheletrici (DMS) correlati all'uso prolungato di VDT (Videoterminali), fornendo biofeedback visivo immediato per correggere deviazioni posturali patomeccaniche (es. Text Neck Syndrome).
+The primary goal is the prevention of musculoskeletal disorders (MSDs) related to prolonged VDT (Video Display Terminal) use, providing immediate visual biofeedback to correct pathomechanical postural deviations such as **Text Neck Syndrome**.
 
-### 🎯 Caso d'Uso
+> **Research background**: BioPosture was developed as part of an experimental study (N=20 subjects, age 14–80) that validated markerless cervical posture assessment against goniometry using Bland-Altman analysis (bias: +1.67°, LoA: ±4.10°, r=0.96). The study demonstrated a statistically significant postural worsening (+7° CSA, p=0.0215) and screen approach (−5.7 cm, p=0.0006) under cognitive load.
 
-- **Professionisti IT**: Sviluppatori, designer, analisti che lavorano 8+ ore al PC
-- **Smart Workers**: Lavoratori da remoto senza postazioni ergonomiche certificate
-- **Studenti**: Lunghe sessioni di studio al computer
-- **Gamer**: Prevenzione infortuni durante sessioni prolungate
-- **Uffici**: Implementazione programmi benessere aziendale
+### 🎯 Use Cases
 
-### 🔬 Tecnologie Core
+- **IT Professionals**: Developers, designers, analysts working 8+ hours at a computer
+- **Remote Workers**: Working from home without certified ergonomic setups
+- **Students**: Long study sessions at the computer
+- **Gamers**: Injury prevention during extended gaming sessions
+- **Offices**: Corporate wellness program implementation
 
-| Tecnologia | Funzione | Versione |
-|------------|----------|----------|
-| **MediaPipe** | Stima posa 3D con 33 landmark corporei | 0.10+ |
-| **OpenCV** | Elaborazione video real-time (30fps) | 4.8+ |
-| **CustomTkinter** | UI moderna cross-platform | 5.2+ |
-| **NumPy** | Calcoli vettoriali e smoothing | 1.24+ |
+### 🔬 Core Technologies
+
+| Technology | Function | Version |
+|------------|----------|---------|
+| **MediaPipe** | 3D pose estimation with 33 body landmarks + 468 face mesh landmarks | 0.10+ |
+| **OpenCV** | Real-time video processing (30 fps) | 4.8+ |
+| **CustomTkinter** | Modern cross-platform UI | 5.2+ |
+| **NumPy** | Vector computation and signal smoothing | 1.24+ |
 
 ---
 
-## ✨ Caratteristiche Principali
+## ✨ Key Features
 
-### 🎥 Monitoraggio Multi-Parametrico Real-Time
+### 🎥 Real-Time Multi-Parameter Monitoring
 
-- **Inclinazione Testa (Head Tilt)**: Rilevazione rotazione cervicale (±90°)
-- **Asimmetria Spalle (Shoulder Tilt)**: Analisi sbilanciamento carico muscolare
-- **Distanza Schermo (Screen Distance)**: Monitoraggio basato su distanza interpupillare
-- **Tensione Cervicale (Neck Compression)**: Ratio collo/testa per forward head posture
+- **Head Tilt**: Cervical rotation detection (±90°)
+- **Shoulder Asymmetry**: Muscular load imbalance analysis
+- **Screen Distance**: Monitoring based on interpupillary distance proxy
+- **Cervical Tension**: Ear-shoulder ratio for forward head posture detection
 
-### ⚙️ Sistema di Calibrazione Intelligente
+### ⚙️ Intelligent Calibration System
 
-- **Calibrazione Personalizzata** (5 secondi): Adattamento alla morfologia individuale
-- **Baseline Dinamica**: Riferimenti posturali specifici per ogni utente
-- **Ricalibrazione On-Demand**: Aggiornamento parametri in qualsiasi momento
+- **Personalized Calibration** (5 seconds): Morphological adaptation per user
+- **Dynamic Baseline**: User-specific postural reference points
+- **On-Demand Recalibration**: Update parameters at any time
 
-### 🔔 Notifiche Native Multi-OS
+### 🔔 Native Multi-OS Notifications
 
-| Sistema Operativo | Metodo Notifica |
-|-------------------|-----------------|
+| Operating System | Notification Method |
+|------------------|---------------------|
 | Windows 10/11 | Windows Toast Notifications (winotify) |
 | macOS | Notification Center (osascript) |
 | Linux | Desktop Notifications (notify-send) |
 
-- **Cooldown Configurabile**: Evita spam di notifiche (default: 8 secondi)
-- **Tempo Allarme Ritardato**: Tolleranza errori transitori (default: 5 secondi)
+- **Configurable Cooldown**: Prevents notification spam (default: 8 seconds)
+- **Delayed Alert Timer**: Tolerance for transient errors (default: 5 seconds)
 
 ### 📊 Analytics & Data Export
 
-- **Efficienza Sessione**: Percentuale tempo con postura corretta
-- **Grafico Real-Time**: Andamento temporale parametri critici (60 samples)
-- **Export CSV**: Esportazione metriche per analisi approfondite
-- **Persistenza Dati**: Configurazione salvata in JSON cross-platform
+- **Session Efficiency**: Percentage of time with correct posture
+- **Real-Time Chart**: Temporal trend of critical parameters (60 samples)
+- **CSV Export**: Metrics export for in-depth analysis
+- **Data Persistence**: Configuration saved in cross-platform JSON
 
-### 🎨 Interfaccia Utente Avanzata
+### 🎨 Advanced User Interface
 
-- **Material Design Theme**: Palette professionale con glass morphism
-- **Dark/Light Mode**: Cambio tema dinamico senza restart
-- **System Tray Integration**: Funzionamento background discreto
-- **Video Feed Ottimizzato**: Rendering 768px con overlay landmark
+- **Material Design Theme**: Professional palette with glass morphism
+- **Dark/Light Mode**: Dynamic theme switching without restart
+- **System Tray Integration**: Discreet background operation
+- **Optimized Video Feed**: 768px rendering with landmark overlay
 
-### 🚀 Automazione & Produttività
+### 🚀 Automation & Productivity
 
-- **Autostart Cross-Platform**:
-  - Windows: Registro `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`
+- **Cross-Platform Autostart**:
+  - Windows: Registry `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`
   - macOS: LaunchAgents (`~/Library/LaunchAgents/`)
   - Linux: Desktop files (`~/.config/autostart/`)
-- **Avvio Minimizzato**: Flag `--minimized` per startup in tray
-- **Pausa Intelligente**: Disattivazione temporanea senza chiudere l'app
+- **Minimized Launch**: `--minimized` flag for startup to tray
+- **Smart Pause**: Temporary deactivation without closing the app
 
 ---
 
-## 🚀 Installazione
+## 🚀 Installation
 
-### 📦 Download Binari Pre-Compilati
+### 📦 Pre-Built Binaries
 
 #### Windows 10/11 (64-bit)
 
 ```powershell
-# Scarica l'installer dalla pagina Releases
+# Download installer from Releases page
 https://github.com/antdf87/BioPosture/releases/download/v2.0/BioPosture_Setup_v2.0.exe
 
-# Esegui con privilegi amministratore
+# Run with administrator privileges
 .\BioPosture_Setup_v2.0.exe
 ```
 
-**Post-Installazione:**
-- Shortcut Desktop automatico
-- Entry nel Menu Start
-- Disinstallazione da Pannello di Controllo
+**Post-Installation:**
+- Automatic Desktop shortcut
+- Start Menu entry
+- Uninstall via Control Panel
 
 #### macOS Catalina 10.15+ (Intel & Apple Silicon)
 
 ```bash
-# Scarica DMG
+# Download DMG
 curl -L -o BioPosture.dmg \
   https://github.com/antdf87/BioPosture/releases/download/v2.0/BioPosture_v2.0_macOS.dmg
 
-# Apri e installa
+# Open and install
 open BioPosture.dmg
-# Trascina BioPosture.app in /Applications
+# Drag BioPosture.app to /Applications
 ```
 
-**Primo Avvio:**
-1. Tasto destro → **Apri** (bypass Gatekeeper)
-2. Autorizza Camera: **System Settings → Privacy & Security → Camera**
-3. Autorizza Notifiche: **System Settings → Notifications**
+**First Launch:**
+1. Right-click → **Open** (bypass Gatekeeper)
+2. Allow Camera: **System Settings → Privacy & Security → Camera**
+3. Allow Notifications: **System Settings → Notifications**
 
 #### Linux (Ubuntu 20.04+ / Debian 11+)
 
 ```bash
-# Download ed estrazione
+# Download and extract
 wget https://github.com/antdf87/BioPosture/releases/download/v2.0/BioPosture_v2.0_linux_x86_64.tar.gz
 tar -xzf BioPosture_v2.0_linux_x86_64.tar.gz
 
-# Esecuzione
+# Run
 cd BioPosture_v2.0_linux_x86_64
 ./BioPosture
 ```
+
 ---
 
-## 📖 Guida Utilizzo
+## 📖 Usage Guide
 
-### 🎬 Primo Avvio - Setup Rapido
+### 🎬 First Launch — Quick Setup
 
-1\. **Avvio Applicazione**
-   - Windows: Menu Start → BioPosture
+1. **Launch Application**
+   - Windows: Start Menu → BioPosture
    - macOS: Launchpad → BioPosture
    - Linux: Application Menu → BioPosture
 
-2\. **Calibrazione Iniziale** (OBBLIGATORIA) "Prima di iniziare il monitoraggio, è necessario calibrare il sistema"
+2. **Initial Calibration** (REQUIRED)
+   ```
+   ┌─────────────────────────────────────────┐
+   │  Before starting monitoring,            │
+   │  you need to calibrate the system:      │
+   │                                         │
+   │  1. Sit in CORRECT posture              │
+   │  2. Look straight at the camera         │
+   │  3. Click "START CALIBRATION"           │
+   │  4. Hold position for 5 seconds         │
+   └─────────────────────────────────────────┘
+   ```
 
-  1. Siediti in postura CORRETTA
-  2. Guarda dritto la camera
-  3. Click "AVVIA CALIBRAZIONE"
-  4. Mantieni posizione per 5 secondi
+3. **Calibration Confirmation**
+   - Status: `MONITORING ACTIVE` (green)
+   - Baseline values saved automatically
 
-3\. **Conferma Calibrazione**
-   - Status: `MONITORAGGIO ATTIVO` (verde)
-   - Valori baseline salvati automaticamente
+### 🎯 Interface
 
-### 🎯 Interfaccia
+#### Video Panel (Left)
 
-#### Pannello Video (Sinistra)
-
-* **Controlli:** `[Camera: 0 ▼]` `[Stop]` `[⚙️ Controls]`
-* **Visualizzazione:**
-    * 🎥 **FEED WEBCAM + OVERLAY**
-    * • Landmark faccia (iris)
-    * • Landmark corpo (orecchie/spalle)
-    * • Linee posturali
-
-#### Pannello Controllo (Destra)
-
-**Card 1: Parametri Posturali**
-
-| PARAMETRI POSTURALI | Valore |
-| :--- | :--- |
-| **Inclinazione Testa** | → 3.5° |
-| **Asimmetria Spalle** | → 2.1° |
-| **Distanza Schermo** | → 58 cm |
-| **Tensione Cervicale** | → 94% |
-
-**Card 2: Efficienza Sessione**
-* **Score:** `██████████░░` **82%**
-
-**Card 3: Grafico Real-Time**
-```text
-^ Δ (Deviazione)
-|
-|      /\    /\
-|     /  \  /  \
-|    /    \/    \
-| ------------------> t
-  Testa (rosso) | Collo (verde)
 ```
-### 📸 Screenshots
+┌────────────────────────────────────────┐
+│  [Camera: 0 ▼] [Stop] [⚙️ Controls]   │
+├────────────────────────────────────────┤
+│                                        │
+│      🎥 WEBCAM FEED + OVERLAY          │
+│                                        │
+│      • Face landmarks (iris)           │
+│      • Body landmarks (ears/shoulders) │
+│      • Postural reference lines        │
+│                                        │
+└────────────────────────────────────────┘
+```
 
-<div align="center">
+#### Control Panel (Right)
 
-### Installazione
-![Installazione](docs/screenshots/installation_windows.png)
+**Card 1: Postural Parameters**
+```
+╔═══════════════════════════════════════╗
+║  POSTURAL PARAMETERS                  ║
+╟───────────────────────────────────────╢
+║  Head Tilt              → 3.5°        ║
+║  Shoulder Asymmetry     → 2.1°        ║
+║  Screen Distance        → 58 cm       ║
+║  Cervical Tension       → 94%         ║
+╚═══════════════════════════════════════╝
+```
 
-### Processo di Calibrazione
-![Calibrazione](docs/screenshots/calibration_windows.png)
+**Card 2: Session Efficiency**
+```
+╔═══════════════════════════════════════╗
+║  SESSION EFFICIENCY                   ║
+║  ████████████████░░░░  82%            ║
+╚═══════════════════════════════════════╝
+```
 
-### Allarme Postura
-![Alert](docs/screenshots/alert_windows.png)
-![Alert](docs/screenshots/alert2_windows.png)
-![Alert](docs/screenshots/alert3_windows.png)
-![Alert](docs/screenshots/alert4_windows.png)
+**Card 3: Real-Time Chart**
+```
+╔═══════════════════════════════════════╗
+║   Δ                                   ║
+║   │   ╱╲    ╱╲                        ║
+║   │  ╱  ╲  ╱  ╲   ╱╲                  ║
+║   │ ╱    ╲╱    ╲ ╱  ╲                 ║
+║   └─────────────────────> t           ║
+║     Head (red) | Neck (green)         ║
+╚═══════════════════════════════════════╝
+```
 
-### Notifica allarme
-![Notification](docs/screenshots/notification_alert_windows.png)
-![Notification](docs/screenshots/notification_alert_windows2.png)
-![Notification](docs/screenshots/notification_alert_windows3.png)
-![Notification](docs/screenshots/notification_alert_windows4.png)
+**Card 4: Configuration**
+```
+╔═══════════════════════════════════════╗
+║  TOLERANCE THRESHOLD                  ║
+║  [━━━━━━━●━━━━━] 50%                  ║
+║                                       ║
+║  ☑ Autostart  ☑ Notifications  ☐ Light║
+╚═══════════════════════════════════════╝
+```
 
-### System Tray
-![System Tray](docs/screenshots/system_tray_windows.png)
-![System Tray](docs/screenshots/system_tray_windows2.png)
+### ⚡ Advanced Features
 
-</div>
----
+| Function | Description |
+|----------|-------------|
+| **Recalibrate** | Update postural baseline |
+| **Pause** | Temporarily disable monitoring |
+| **Stop Camera** | Stop video acquisition |
+| **Save KPIs** | Export CSV with session metrics |
+| **Minimize to Tray** | Continue monitoring in background |
 
-### ⚡ Funzionalità Avanzate
+### 🎛️ Advanced Configuration
 
-| Funzione | Hotkey | Descrizione |
-|----------|--------|-------------|
-| **Ricalibra** | - | Aggiorna baseline posturale |
-| **Pausa** | - | Disattiva monitoraggio temporaneo |
-| **Stop Camera** | - | Ferma acquisizione video |
-| **Salva KPI** | - | Esporta CSV con metriche sessione |
-| **Riduci a Tray** | Close Window | Continua monitoraggio in background |
-
-### 🎛️ Configurazione Avanzata
-
-#### Modifica Soglie (File: `config.json`)
+#### Modify Thresholds (`config.json`)
 
 ```json
 {
   "thresholds": {
-    "soglia_angoli": 10.0,        // Tolleranza inclinazione (gradi)
-    "soglia_dist_max": 1.35,      // Distanza massima (ratio)
-    "soglia_dist_min": 0.65,      // Distanza minima (ratio)
-    "soglia_compressione": 0.85,  // Tensione cervicale (ratio)
-    "tempo_allarme": 5.0,         // Secondi prima allarme
-    "cooldown_notifica": 8.0      // Secondi tra notifiche
+    "soglia_angoli": 10.0,        // Angle tolerance (degrees)
+    "soglia_dist_max": 1.35,      // Maximum distance (ratio)
+    "soglia_dist_min": 0.65,      // Minimum distance (ratio)
+    "soglia_compressione": 0.85,  // Cervical tension (ratio)
+    "tempo_allarme": 5.0,         // Seconds before alert
+    "cooldown_notifica": 8.0      // Seconds between notifications
   }
 }
 ```
 
-**Location file config:**
+**Config file location:**
 - Windows: `%APPDATA%\BioPosture\config.json`
 - macOS: `~/Library/Application Support/BioPosture/config.json`
 - Linux: `~/.config/BioPosture/config.json`
 
 ---
 
-## 🛠 Compilazione da Sorgente
+## 📸 Screenshots
 
-### 📋 Requisiti Sistema
+<div align="center">
 
-| Componente | Minimo | Raccomandato |
-|------------|--------|--------------|
-| **RAM** | 4GB | 8GB |
-| **CPU** | Dual-core 2.0GHz | Quad-core 2.5GHz+ |
+### Main Interface
+![Interface](docs/screenshots/main_interface.png)
+
+### Calibration Process
+![Calibration](docs/screenshots/calibration.png)
+
+### Posture Alert
+![Alert](docs/screenshots/posture_alert1.png)
+![Alert](docs/screenshots/posture_alert2.png)
+
+### Alert Notification
+![Notification](docs/screenshots/notification_alert1.jpeg)
+![Notification](docs/screenshots/notification_alert2.jpeg)
+
+### System Tray
+![System Tray](docs/screenshots/system_tray1.jpeg)
+![System Tray](docs/screenshots/system_tray2.jpeg)
+
+</div>
+
+---
+
+## 🛠 Build from Source
+
+### 📋 System Requirements
+
+| Component | Minimum | Recommended |
+|-----------|---------|-------------|
+| **RAM** | 4 GB | 8 GB |
+| **CPU** | Dual-core 2.0 GHz | Quad-core 2.5 GHz+ |
 | **Webcam** | 720p 30fps | 1080p 30fps |
 | **Python** | 3.8 | 3.11 |
-| **Storage** | 500MB | 1GB |
+| **Storage** | 500 MB | 1 GB |
 
-### 🔧 Setup Ambiente Sviluppo
+### 🔧 Development Environment Setup
 
 #### 1. Clone Repository
 
@@ -284,7 +317,7 @@ git clone https://github.com/antdf87/BioPosture.git
 cd BioPosture
 ```
 
-#### 2. Ambiente Virtuale
+#### 2. Virtual Environment
 
 **Windows:**
 ```powershell
@@ -298,14 +331,14 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-#### 3. Installazione Dipendenze
+#### 3. Install Dependencies
 
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-**Dipendenze Core:**
+**Core dependencies:**
 ```
 customtkinter==5.2.0    # UI Framework
 opencv-python==4.8.0    # Computer Vision
@@ -317,45 +350,42 @@ pyinstaller==6.0.0      # Packaging
 winotify==1.1.0         # Windows Notifications (Windows only)
 ```
 
-#### 4. Verifica Setup
+#### 4. Verify Setup
 
 ```bash
 python bioposture_interface.py
 ```
 
-### 🏗️ Build Installer per Distribuzione
+### 🏗️ Build Installer for Distribution
 
 #### Windows
 
 ```bash
-# 1. Compila binario
+# 1. Compile binary
 python build_scripts\build_windows.py
-
 # Output: dist\BioPosture.exe (standalone)
 
-# 2. Crea installer NSIS
-# Prerequisito: NSIS installato (https://nsis.sourceforge.io/)
-# Tasto destro su installers\windows\installer.nsi → "Compile NSIS Script"
-
+# 2. Create NSIS installer
+# Prerequisite: NSIS installed (https://nsis.sourceforge.io/)
+# Right-click installers\windows\installer.nsi → "Compile NSIS Script"
 # Output: BioPosture_Setup_v2.0.exe
 ```
 
-**Dimensione finale:** ~220MB (include Python runtime + librerie)
+**Final size:** ~220 MB (includes Python runtime + libraries)
 
 #### macOS
 
 ```bash
-# 1. Genera icona .icns
+# 1. Generate .icns icon
 mkdir BioPosture.iconset
-# ... (genera tutte le dimensioni)
+# ... (generate all sizes)
 iconutil -c icns BioPosture.iconset -o BioPosture.icns
 
-# 2. Compila bundle
+# 2. Compile bundle
 python build_scripts/build_macos.py
-
 # Output: dist/BioPosture.app
 
-# 3. (Opzionale) Crea DMG
+# 3. (Optional) Create DMG
 brew install create-dmg
 create-dmg \
   --volname "BioPosture Installer" \
@@ -366,31 +396,27 @@ create-dmg \
   "dist/BioPosture.app"
 ```
 
-**Dimensione finale:** ~70MB (bundle universale Intel/ARM)
+**Final size:** ~70 MB (universal Intel/ARM bundle)
 
 #### Linux
 
 ```bash
-# 1. Installa dipendenze sistema
+# 1. Install system dependencies
 sudo apt install python3-tk libnotify-bin libgtk-3-0
 
-# 2. Compila binario
+# 2. Compile binary
 python build_scripts/build_linux.py
-
 # Output: dist/BioPosture
 
-# 3. (Opzionale) Crea .deb
-# Vedi: build_scripts/create_deb.sh
-
-# 4. (Opzionale) Crea AppImage
-# Vedi: build_scripts/create_appimage.sh
+# 3. (Optional) Create .deb → see build_scripts/create_deb.sh
+# 4. (Optional) Create AppImage → see build_scripts/create_appimage.sh
 ```
 
-**Dimensione finale:** ~150MB (include Python + dipendenze)
+**Final size:** ~150 MB (includes Python + dependencies)
 
 ---
 
-## 📊 Architettura Tecnica
+## 📊 Technical Architecture
 
 ### 🏗️ Stack Diagram
 
@@ -407,7 +433,7 @@ python build_scripts/build_linux.py
     └────────┬────────┘            └────────┬────────┘
              │                               │
     ┌────────▼────────┐            ┌────────▼─────────────────┐
-    │  Config Mgr     │            │  Computer Vision Pipeline │
+    │  Config Manager │            │  Computer Vision Pipeline │
     │  - JSON I/O     │            │  ┌─────────────────────┐ │
     │  - Persistence  │            │  │ OpenCV Camera       │ │
     │                 │            │  │ (30 FPS capture)    │ │
@@ -431,8 +457,8 @@ python build_scripts/build_linux.py
                                    │  └──────────┬──────────┘ │
                                    │             │            │
                                    │  ┌──────────▼──────────┐ │
-                                   │  │ Data Smoother       │ │
-                                   │  │ (Exponential MA)    │ │
+                                   │  │ EMA Data Smoother   │ │
+                                   │  │ (α = 0.75 default)  │ │
                                    │  └──────────┬──────────┘ │
                                    │             │            │
                                    │  ┌──────────▼──────────┐ │
@@ -455,11 +481,11 @@ Camera Frame (30 FPS)
     │
     ├─→ MediaPipe Pose Detection
     │   └─→ Upper Body Landmarks (7, 8, 11, 12)
-    │       ├─→ Head Tilt Angle (ear-ear line)
-    │       ├─→ Shoulder Tilt Angle (shoulder-shoulder line)
-    │       └─→ Neck Length Ratio (ear-shoulder distance)
+    │       ├─→ Head Tilt Angle     [arctan2(ear_r - ear_l)]
+    │       ├─→ Shoulder Tilt Angle [arctan2(sh_r - sh_l)]
+    │       └─→ Neck Length Ratio   [dist(ear, shoulder) / dist_iris]
     │
-    ├─→ Exponential Moving Average Smoothing (α=0.7-0.8)
+    ├─→ Exponential Moving Average Smoothing (α = 0.7–0.8)
     │
     ├─→ Threshold Evaluation
     │   ├─→ Calibration Baseline Δ
@@ -470,42 +496,45 @@ Camera Frame (30 FPS)
     │
     └─→ Notification Dispatch (if threshold exceeded)
         └─→ OS-Specific Method
-            ├─→ Windows: winotify
-            ├─→ macOS: osascript
-            └─→ Linux: notify-send
+            ├─→ Windows : winotify
+            ├─→ macOS   : osascript
+            └─→ Linux   : notify-send
 ```
 
-### 📐 Algoritmi Chiave
+### 📐 Key Algorithms
 
-#### 1. Calcolo Angolo Inclinazione
+#### 1. Angle Calculation
 
 ```python
 def calc_angle(p1: np.ndarray, p2: np.ndarray) -> float:
     """
-    Calcola angolo tra due punti rispetto all'orizzontale.
-    
+    Calculates the angle between two points relative to horizontal.
+
     Args:
-        p1, p2: Coordinate [x, y] in pixel
-    
+        p1, p2: Coordinates [x, y] in pixels
+
     Returns:
-        Angolo in gradi [-180, 180]
+        Angle in degrees [-180, 180]
     """
     return np.degrees(np.arctan2(p2[1] - p1[1], p2[0] - p1[0]))
 ```
 
-#### 2. Data Smoothing (Exponential Moving Average)
+#### 2. EMA Signal Smoothing
 
 ```python
 class DataSmoother:
     def __init__(self, alpha: float = 0.75):
         """
+        Exponential Moving Average filter for real-time noise reduction.
+
         Args:
-            alpha: Smoothing factor [0,1]
-                   0 = no smoothing, 1 = maximum smoothing
+            alpha: Smoothing factor [0, 1]
+                   Low alpha = more smoothing (slower response)
+                   High alpha = less smoothing (faster response)
         """
         self.alpha = alpha
         self.val = None
-    
+
     def update(self, new_val: float) -> float:
         if self.val is None:
             self.val = new_val
@@ -514,29 +543,30 @@ class DataSmoother:
         return self.val
 ```
 
-#### 3. Severity Scaling Dinamico
+#### 3. Dynamic Severity Scaling
 
 ```python
-# Utente imposta severity 0-100%
+# User sets severity 0–100%
 severity = config["ui"]["severity"] / 100.0
 
-# Fattori di tolleranza
-tolerance_factor = 1.5 - severity  # [0.5, 1.5]
-time_factor = 2.0 - (severity * 1.5)  # [0.5, 2.0]
+# Adaptive tolerance factors
+tolerance_factor = 1.5 - severity        # range [0.5, 1.5]
+time_factor      = 2.0 - (severity * 1.5)  # range [0.5, 2.0]
 
-# Soglie adattive
+# Adaptive thresholds
 angle_threshold = base_angle_threshold * tolerance_factor
-alert_delay = base_alert_delay * time_factor
+alert_delay     = base_alert_delay     * time_factor
+# High severity → tighter threshold + faster alert
 ```
 
 ---
 
-### 🔬 Validazione & Testing
+## 🔬 Validation & Testing
 
 ### ✅ Test Matrix
 
-| Piattaforma | Versione | Camera | System Tray | Notifiche | Autostart |
-|-------------|----------|--------|-------------|-----------|-----------|
+| Platform | Version | Camera | System Tray | Notifications | Autostart |
+|----------|---------|--------|-------------|---------------|-----------|
 | Windows 10 | 22H2 | ✅ | ✅ | ✅ | ✅ |
 | Windows 11 | 23H2 | ✅ | ✅ | ✅ | ✅ |
 | macOS Monterey | 12.7 | ✅ | ✅ | ✅ | ✅ |
@@ -546,68 +576,65 @@ alert_delay = base_alert_delay * time_factor
 | Ubuntu | 24.04 LTS | ✅ | ✅ | ✅ | ✅ |
 | Debian | 12 | ✅ | ✅ | ✅ | ✅ |
 
-
-
 ### 🐛 Known Issues
 
-1. **macOS < 10.15**: MediaPipe non supportato (richiede Catalina+)
-2. **Linux Wayland**: System tray potrebbe non apparire (limitazione X11)
-3. **Chromebook Linux (Crostini)**: Camera non condivisa con container
+1. **macOS < 10.15**: MediaPipe not supported (requires Catalina+)
+2. **Linux Wayland**: System tray may not appear (X11 limitation)
+3. **Chromebook Linux (Crostini)**: Camera not shared with container
 
 ---
 
-## 🤝 Contributi
+## 🤝 Contributing
 
-I contributi sono **fortemente benvenuti**! BioPosture è un progetto open-source che migliora con il feedback della community.
+Contributions are **strongly welcome**! BioPosture is an open-source project that improves with community feedback.
 
-### 🎯 Aree di Contributo
+### 🎯 Contribution Areas
 
-| Area | Priorità | Competenze |
-|------|----------|------------|
-| **Algoritmi Posturali** | 🔴 Alta | Computer Vision, Biomeccanica |
-| **UI/UX Improvements** | 🟠 Media | Design, Tkinter |
-| **Testing Cross-Platform** | 🟡 Media | QA, Multi-OS |
-| **Documentazione** | 🟢 Bassa | Technical Writing |
-| **Traduzioni** | 🟢 Bassa | Lingue straniere |
+| Area | Priority | Skills |
+|------|----------|--------|
+| **Postural Algorithms** | 🔴 High | Computer Vision, Biomechanics |
+| **UI/UX Improvements** | 🟠 Medium | Design, Tkinter |
+| **Cross-Platform Testing** | 🟡 Medium | QA, Multi-OS |
+| **Documentation** | 🟢 Low | Technical Writing |
+| **Translations** | 🟢 Low | Foreign languages |
 
+### 🐛 Reporting Bugs
 
-### 🐛 Segnalare Bug
-
-Apri una [Issue](https://github.com/antdf87/BioPosture/issues/new) con:
+Open an [Issue](https://github.com/antdf87/BioPosture/issues/new) with:
 
 ```markdown
-**Descrizione Bug:**
-[Descrizione chiara e concisa]
+**Bug Description:**
+[Clear and concise description]
 
-**Passi per Riprodurre:**
-1. Apri applicazione
-2. Esegui azione X
-3. Osserva comportamento Y
+**Steps to Reproduce:**
+1. Open application
+2. Perform action X
+3. Observe behavior Y
 
-**Comportamento Atteso:**
-[Cosa dovrebbe accadere]
+**Expected Behavior:**
+[What should happen]
 
-**Comportamento Attuale:**
-[Cosa accade invece]
+**Actual Behavior:**
+[What happens instead]
 
 **Environment:**
 - OS: [Windows 11 / macOS 14.2 / Ubuntu 22.04]
-- Versione BioPosture: [2.0]
-- Webcam: [Modello]
+- BioPosture Version: [2.0]
+- Webcam: [Model]
 
 **Screenshot/Log:**
-[Allega se disponibile]
+[Attach if available]
 ```
 
-### 💡 Proporre Features
+### 💡 Proposing Features
 
-Apri una [Discussion](https://github.com/antdf87/BioPosture/discussions/new?category=ideas) per discutere l'idea **prima** di implementarla.
+Open a [Discussion](https://github.com/antdf87/BioPosture/discussions/new?category=ideas) to discuss the idea **before** implementing it.
 
 ---
 
-## 📄 Licenza
+## 📄 License
 
-Questo progetto è rilasciato sotto **MIT License**.
+This project is released under the **MIT License**.
 
 ```
 MIT License
@@ -621,60 +648,74 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-[... vedi LICENSE.txt per testo completo]
+[... see LICENSE.txt for full text]
 ```
 
+---
 
-### 👤 Autore
+## 👨‍💻 Author
 
-**Antonio Del Fine (AntDF87)**  
-*Engineering & Biomedical Solutions*
+**Antonio Del Fine (AntDF87)**
+*Biomedical Engineer | Computer Vision & ML*
 
 - 🐙 GitHub: [@antdf87](https://github.com/antdf87)
 - 📧 Issues & Support: [GitHub Issues](https://github.com/antdf87/BioPosture/issues)
 
 ---
-### 📚 Citazione
 
-Se utilizzi questo software per scopi accademici o di ricerca, per favore cita il progetto utilizzando il file CITATION.cff incluso o il seguente formato BibTeX:
+## 📚 Citation
 
+If you use this software for academic or research purposes, please cite the project using the included `CITATION.cff` file or the following BibTeX:
+
+```bibtex
 @software{BioPosture2025,
-  author = {AntDF87},
-  title = {BioPosture: Markerless Kinematic Analysis System},
-  year = {2025},
+  author  = {Del Fine, Antonio},
+  title   = {BioPosture: Real-Time Markerless Postural Monitoring System},
+  year    = {2025},
   version = {2.0.0},
-  url = {[https://github.com/antdf87/BioPosture](https://github.com/antdf87/BioPosture)}
+  url     = {https://github.com/antdf87/BioPosture}
 }
-
-### 🙏 Ringraziamenti
-
-Questo progetto non sarebbe possibile senza:
-
-- **[Google MediaPipe](https://google.github.io/mediapipe/)** - Framework ML per pose estimation
-- **[OpenCV Foundation](https://opencv.org/)** - Computer Vision library
-- **[Tom Schimansky](https://github.com/TomSchimansky)** - CustomTkinter framework
-- **[Moses Palmer](https://github.com/moses-palmer)** - Pystray library
-- **Comunità Open Source** - Per feedback e contributi
+```
 
 ---
 
-### 🆘 Hai bisogno di aiuto?
+## 🙏 Acknowledgements
 
-1. **Documentazione**: Leggi questa guida completa
-2. **FAQ**: Controlla [Wiki](https://github.com/antdf87/BioPosture/wiki) (coming soon)
-3. **Issues**: Cerca tra [issues esistenti](https://github.com/antdf87/BioPosture/issues)
-4. **Discussions**: Chiedi alla [community](https://github.com/antdf87/BioPosture/discussions)
+This project would not be possible without:
 
-### 🌟 Ti piace BioPosture?
-
-- ⭐ **Lascia una stella** su GitHub
-- 📢 **Condividi** con colleghi e amici
-- ☕ **Supporta** lo sviluppo (coming soon)
+- **[Google MediaPipe](https://google.github.io/mediapipe/)** — ML framework for pose estimation
+- **[OpenCV Foundation](https://opencv.org/)** — Computer Vision library
+- **[Tom Schimansky](https://github.com/TomSchimansky)** — CustomTkinter framework
+- **[Moses Palmer](https://github.com/moses-palmer)** — Pystray library
+- **Open Source Community** — For feedback and contributions
 
 ---
 
-### 🗺️ Roadmap
+### 🆘 Need Help?
 
-### v2.1 (Q2 2026)
+1. **Documentation**: Read this guide
+2. **FAQ**: Check the [Wiki](https://github.com/antdf87/BioPosture/wiki) *(coming soon)*
+3. **Issues**: Search [existing issues](https://github.com/antdf87/BioPosture/issues)
+4. **Discussions**: Ask the [community](https://github.com/antdf87/BioPosture/discussions)
 
-- [ ] **Machine Learning
+### 🌟 Like BioPosture?
+
+- ⭐ **Star** the repo on GitHub
+- 📢 **Share** with colleagues and friends
+- 🐛 **Report bugs** to help improve the project
+
+---
+
+## 🗺️ Roadmap
+
+### v2.1 (Q2 2025)
+- [ ] Machine Learning for complex postural pattern recognition
+- [ ] Weekly analytics dashboard and PDF reports
+- [ ] Gamification system (streaks, goals, badges)
+- [ ] Integrated stretching exercise recommendations
+
+### v3.0 (Future)
+- [ ] EMG sensor integration for muscle fatigue quantification
+- [ ] Optoelectronic system validation (gold standard)
+- [ ] REST API for third-party health platform integration
+- [ ] Mobile companion app
