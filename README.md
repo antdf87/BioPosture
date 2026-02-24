@@ -708,7 +708,7 @@ This project would not be possible without:
 
 ## 🗺️ Roadmap
 
-### v2.1 (Q2 2025)
+### v2.1 (Q2 2026)
 - [ ] Machine Learning for complex postural pattern recognition
 - [ ] Weekly analytics dashboard and PDF reports
 - [ ] Gamification system (streaks, goals, badges)
