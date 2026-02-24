@@ -286,7 +286,7 @@ cd BioPosture_v2.0_linux_x86_64
 
 ### Alert Notification
 ![Notification](docs/screenshots/notification_alert_windows.png)
-![Notification](docs/screenshots/notification_alert2_windows.png)
+![Notification](docs/screenshots/notification_alert_windows2.png)
 
 ### System Tray
 ![System Tray](docs/screenshots/system_tray_windows.png)
