@@ -275,22 +275,22 @@ cd BioPosture_v2.0_linux_x86_64
 <div align="center">
 
 ### Main Interface
-![Interface](docs/screenshots/main_interface.png)
+![Interface](docs/screenshots/alert4_windows.png)
 
 ### Calibration Process
-![Calibration](docs/screenshots/calibration.png)
+![Calibration](docs/screenshots/calibration_windows.png)
 
 ### Posture Alert
-![Alert](docs/screenshots/posture_alert1.png)
-![Alert](docs/screenshots/posture_alert2.png)
+![Alert](docs/screenshots/alert_windows.png)
+![Alert](docs/screenshots/alert2_windows.png)
 
 ### Alert Notification
-![Notification](docs/screenshots/notification_alert1.jpeg)
-![Notification](docs/screenshots/notification_alert2.jpeg)
+![Notification](docs/screenshots/notification_alert_windows.png)
+![Notification](docs/screenshots/notification_alert2_windows.png)
 
 ### System Tray
-![System Tray](docs/screenshots/system_tray1.jpeg)
-![System Tray](docs/screenshots/system_tray2.jpeg)
+![System Tray](docs/screenshots/system_tray_windows.png)
+![System Tray](docs/screenshots/system_tray_windows2.png)
 
 </div>
 
